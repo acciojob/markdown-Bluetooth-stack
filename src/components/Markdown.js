@@ -5,10 +5,10 @@ const Markdown = ()=>{
 
     return(
         <div>
-            <div>
+            <div className="app">
                 <textarea rows={40} cols={80} onChange={(e)=>{setText(e.target.value)}}></textarea>
             </div>
-            <div>
+            <div className="preview">
                 {text}
             </div>
         </div>
