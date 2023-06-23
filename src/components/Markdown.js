@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Markdown = () => {
     let [text, setText] = useState('');
+
+    useEffect(()=>{
+        let str = text.replace(/\n/g, " ");
+        setText(str);
+    }, [text])
 
     return (
         <div>
