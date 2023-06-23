@@ -4,9 +4,9 @@ const Markdown = () => {
     let [render, setRender] = useState(text);
     let [text, setText] = useState('');
 
-    useEffect(()=>{
+    useEffect(() => {
         let str = '';
-        text&&( str = text.replace(/\n/g, " "));
+        text && (str = text.replace(/\n/g, " "));
         let str1 = str.split(' ');
         setRender(str1[1]);
     }, [text])
@@ -18,7 +18,10 @@ const Markdown = () => {
             </div>
             <div className="preview">
                 <h1>
-                    {render}
+                    <strong>
+                        {render}
+
+                    </strong>
                 </h1>
             </div>
         </div>
