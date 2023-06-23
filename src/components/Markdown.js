@@ -18,8 +18,8 @@ const Markdown = () => {
             <div className="app">
                 <textarea rows={30} cols={40} value={markdown} onChange={handleMarkdownChange} />
             </div>
-            <div>
-                <h1 id="preview" className="preview"></h1>
+            <div className="preview">
+                <h1 id="preview" ></h1>
             </div>
         </div>
     );
