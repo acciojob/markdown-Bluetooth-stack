@@ -8,9 +8,9 @@ const Markdown = ()=>{
             <div className="app">
                 <textarea rows={40} cols={80} onChange={(e)=>{setText(e.target.value)}}></textarea>
             </div>
-            <div className="preview">
+            <h1 className="preview">
                 {text}
-            </div>
+            </h1>
         </div>
     )
 }
