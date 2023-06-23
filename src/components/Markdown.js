@@ -1,16 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const Markdown = ()=>{
+const Markdown = () => {
     let [text, setText] = useState('');
 
-    return(
+    return (
         <div>
             <div className="app">
-                <textarea rows={40} cols={80} onChange={(e)=>{setText(e.target.value)}}></textarea>
+                <textarea rows={40} cols={80} onChange={(e) => { setText(e.target.value) }}></textarea>
             </div>
-            <h1 className="preview">
-                {text}
-            </h1>
+            <div className="preview">
+                <h1>
+                    {text}
+                </h1>
+            </div>
         </div>
     )
 }
