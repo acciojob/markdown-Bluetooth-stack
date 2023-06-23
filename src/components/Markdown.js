@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 const Markdown = () => {
+    let [render, setRender] = useState(text);
     let [text, setText] = useState('');
 
     useEffect(()=>{
-        let str = text.replace(/\n/g, " ");
-        setText(str);
+        let str = '';
+        text&&( str = text.replace(/\n/g, " "));
+        let str1 = str.split(' ');
+        setRender(str1[1]);
     }, [text])
 
     return (
@@ -15,7 +18,7 @@ const Markdown = () => {
             </div>
             <div className="preview">
                 <h1>
-                    {text}
+                    {render}
                 </h1>
             </div>
         </div>
